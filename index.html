@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name — developer, designer, problem solver." />
+
+  <!-- Simple, single-file portfolio. Edit the placeholders below (YOUR NAME, BIO, PROJECTS, LINKS) -->
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7dd3fc;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:linear-gradient(180deg,#071024 0%, #071827 60%); color:#e6eef6; -webkit-font-smoothing:antialiased;
+      padding:24px; display:flex; align-items:center; justify-content:center;
+    }
+    .wrap{max-width:1100px; width:100%;}
+    header{display:flex; gap:20px; align-items:center; margin-bottom:28px}
+    .avatar{width:88px; height:88px; border-radius:18px; background:linear-gradient(135deg,var(--accent), #60a5fa); display:flex; align-items:center; justify-content:center; font-weight:700; color:#021025; font-size:28px}
+    .title h1{margin:0; font-size:28px}
+    .title p{margin:4px 0 0; color:var(--muted)}
+
+    main{display:grid; grid-template-columns: 1fr 360px; gap:22px}
+
+    .card{background:var(--card); border-radius:var(--radius); padding:18px; box-shadow: 0 6px 30px rgba(2,6,23,0.6);}
+
+    /* left column */
+    .about{line-height:1.55}
+    .cta{display:flex; gap:12px; margin-top:14px}
+    .btn{background:var(--accent); color:#022; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600}
+    .btn.secondary{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
+
+    h2{margin:0 0 12px}
+    .projects{display:grid; gap:12px}
+    .project{display:flex; gap:12px; align-items:flex-start}
+    .project .thumb{width:84px; height:64px; border-radius:8px; background:var(--glass); display:flex; align-items:center; justify-content:center; color:var(--muted)}
+    .project .meta{flex:1}
+    .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .tag{font-size:12px; padding:6px 8px; border-radius:999px; background:rgba(255,255,255,0.03); color:var(--muted)}
+
+    /* right column */
+    .sidebar .section{margin-bottom:14px}
+    .skills{display:flex; gap:8px; flex-wrap:wrap}
+    .skill{background:rgba(255,255,255,0.03); padding:8px 10px; border-radius:999px; font-size:13px}
+
+    .contact a{display:block; text-decoration:none; color:var(--muted); margin-bottom:8px}
+
+    footer{margin-top:18px; text-align:center; color:var(--muted); font-size:12px}
+
+    /* responsive */
+    @media (max-width:900px){
+      main{grid-template-columns:1fr;}
+      header{flex-direction:row}
+      .avatar{width:72px;height:72px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">YN</div>
+      <div class="title">
+        <h1>Your Name — Frontend Engineer</h1>
+        <p>Building delightful web experiences. Based in City, Country. Open to freelance & full-time.</p>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <section class="card about">
+          <h2>About me</h2>
+          <p>Hi — I'm <strong>Your Name</strong>. I build accessible, fast, and maintainable websites and dashboards. I enjoy turning ideas into products and learning new tools along the way.</p>
+
+          <div class="cta">
+            <a class="btn" href="#projects">View projects</a>
+            <a class="btn secondary" href="mailto:you@example.com">Get in touch</a>
+          </div>
+        </section>
+
+        <section id="projects" class="card" style="margin-top:16px">
+          <h2>Selected projects</h2>
+          <div class="projects">
+            <!-- Repeat/replace these project blocks with your own -->
+            <article class="project">
+              <div class="thumb">UI</div>
+              <div class="meta">
+                <strong>Project One</strong>
+                <div style="color:var(--muted); font-size:14px; margin-top:6px">A short description of the project, tech used and your role.</div>
+                <div class="tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Node</span>
+                  <span class="tag">Postgres</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="thumb">DB</div>
+              <div class="meta">
+                <strong>Project Two</strong>
+                <div style="color:var(--muted); font-size:14px; margin-top:6px">Short description. Link to live demo or repo below.</div>
+                <div class="tags">
+                  <span class="tag">Tableau</span>
+                  <span class="tag">Data Viz</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- add more projects as needed -->
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:16px">
+          <h2>Experience & Education</h2>
+          <p style="color:var(--muted);">Job Title — Company (Year–Year)</p>
+          <p style="color:var(--muted);">B.Sc. in Computer Science — University (Year)</p>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <div class="card section contact">
+          <h2>Contact</h2>
+          <a href="mailto:you@example.com">you@example.com</a>
+          <a href="https://github.com/your-username" target="_blank" rel="noopener">github.com/your-username</a>
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">linkedin.com/in/your-profile</a>
+        </div>
+
+        <div class="card section">
+          <h2>Skills</h2>
+          <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React</span>
+            <span class="skill">Python</span>
+            <span class="skill">SQL</span>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Quick links</h2>
+          <a href="#projects">Projects</a>
+          <a href="#">Resume (PDF)</a>
+          <a href="#">Blog</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="card" style="display:inline-block; padding:10px 14px; margin-top:18px">Made with ♥ — Replace this with your own copyright or a link to your resume.</div>
+    </footer>
+  </div>
+
+  <!-- Optional small script: replace placeholders in one place -->
+  <script>
+    // Replace initials in avatar from your name
+    (function(){
+      const name = 'Your Name'; // EDIT
+      const initials = name.split(' ').map(s=>s[0]).slice(0,2).join('').toUpperCase();
+      document.querySelector('.avatar').textContent = initials;
+      document.title = name + ' — Portfolio';
+      document.querySelector('.title h1').textContent = name + ' — Frontend Engineer';
+    })();
+  </script>
+</body>
+</html>
